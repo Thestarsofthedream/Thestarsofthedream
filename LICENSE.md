@@ -11,89 +11,53 @@
   background-size: cover;
   animation: rainbow 10s infinite;
 }
-
-@keyframes rainbow {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-		.tox {
-			text-align: center;
-			margin-top: 20px;
-		}
-
-		.tox img {
-			width: 100px;
-			height: 100px;
-			border-radius: 5px;
-			transition: transform 0.5s;
-		}
-
-		.tox img:hover {
-			transform: rotateY(180deg);
-		}
-
-		.gnlieb {
-			display: flex;
-			justify-content: space-evenly;
-			margin-top: 20px;
-		}
-
-		.gnlieb .card {
-			width: 150px;
-			height: 50px;
-			background-color: rgba(16, 52, 166, 0.7);
-			text-align: center;
-			border-radius: 10px;
-			font-size: 18px;
-			color: #fff;
-			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-		}
-
-		.gnlieb .card:hover {
-			background-color: rgba(16, 52, 166, 0.9);
-			cursor: pointer;
-			transition: background-color 0.3s ease-in-out;
-		}
-
-		.gnlieb .card a {
-			color: #fff;
-			text-decoration: none;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			height: 100%;
-		}
-
-#progress-bar {
-  width: 340px;
-  height: 10px;
-  border: 1px solid #ccc;
-  position: relative;
-  overflow: hidden;
-}
-
-#progress-bar hr {
-  height: 100%;
-  width: 0;
-  background-color: #00aaff;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: width 0.5s ease;
-}
-	</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>免费云软件库</title>
+<style>inite;
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        backdrop-filter: blur(10px);
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        transition: background-color 0.3s ease, box-shadow 0.5s ease, transform 0.5s ease;
+        cursor: pointer;
+        width: 80%; /* Adjust container width */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        background-color: #fff;
+        margin-top: 20px;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        display: flex;
+        width: 100%; /* Full width cards */
+    }
+    .left {
+        flex: 3;
+    }
+    .right {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .right a {
+        text-decoration: none;
+        color: white;
+        background-color: #007BFF;
+        padding: 10px 10px;
+        border-radius: 5px;
+    }
+</style>
 </head>
 <body>
-	<div class="tox">
-		<img src="https://app2.zhuiying.cyou//logo.jpg" alt="头像" />
-		<br /><br />
-		<h1>资源云软件库</h1>
-	</div>
-<div id="progress-bar">
-  <hr>
-</div>
 <div class="container">
     <h1>免费云软件库</h1>
     <p>欢迎来到免费云软件库</p>
@@ -225,7 +189,8 @@
             <a href="https://wwac.lanzouj.com/b0en1q6xe" target="_blank">访问网站</a>
         </div>
     </div>
-    </footer>
+</div>
+</footer>
    <script src="js/redirectTo.js"></script>
     <script src="js/script.js"></script>
     <!--波浪-->
@@ -236,13 +201,6 @@
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
     <!--音乐播放器-->
     <script src="https://myhkw.cn/player/js/player.js" id="myhk" key="demo" m="1"></script>
-<footer>
-    
-</div>
-    <p>© 2024 <a href="https://m.baidu.com/?from=1012852z">免费云网络</a></p>
-       <p>ICP备案<a href="https://www.mps.gov.cn/index.html">：已备案</a></p>
-    <p>公安备案<a href="https://www.mps.gov.cn/index.html">已备案</a></p>
-
    
 </body>
 </html>
