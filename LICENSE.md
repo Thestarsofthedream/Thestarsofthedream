@@ -225,13 +225,7 @@
             <a href="https://wwac.lanzouj.com/b0en1q6xe" target="_blank">访问网站</a>
         </div>
     </div>
-    <!-- 更多卡片可以根据需要添加 -->
-</div>
-<footer>
-    <p>© 2024 <a href="https://m.baidu.com/?from=1012852z">资源云网络</a></p>
-       <p>ICP备案<a href="https://www.mps.gov.cn/index.html">：已备案</a></p>
-    <p>公安备案<a href="https://www.mps.gov.cn/index.html">已备案</a></p>
-</footer>
+    </footer>
    <script src="js/redirectTo.js"></script>
     <script src="js/script.js"></script>
     <!--波浪-->
@@ -242,6 +236,13 @@
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
     <!--音乐播放器-->
     <script src="https://myhkw.cn/player/js/player.js" id="myhk" key="demo" m="1"></script>
+<footer>
+    
+</div>
+    <p>© 2024 <a href="https://m.baidu.com/?from=1012852z">免费云网络</a></p>
+       <p>ICP备案<a href="https://www.mps.gov.cn/index.html">：已备案</a></p>
+    <p>公安备案<a href="https://www.mps.gov.cn/index.html">已备案</a></p>
+
    
 </body>
 </html>
