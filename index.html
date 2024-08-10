@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      charset="utf-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>温馨提醒</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --main-color: #303133;
+        --minor-color: #909399;
+        --danger-color: #f56c6c;
+      }
+
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      h2 {
+        color: var(--main-color);
+      }
+
+      div {
+        max-width: 85vw;
+        text-align: center;
+        color: var(--minor-color);
+      }
+
+      button {
+        padding: 10px;
+        border-radius: 8px;
+        background-color: #fff;
+        border: 2px solid var(--main-color);
+        color: var(--main-color);
+      }
+
+      button:first-child {
+        margin-right: 20px;
+        border: 2px solid var(--danger-color);
+        color: var(--danger-color);
+      }
+
+      footer {
+        position: fixed;
+        bottom: 30px;
+        color: var(--minor-color);
+      }
+
+      footer a {
+        color: var(--minor-color);
+      }
+    </style>
+  </head>
+   <body>
+    <h2>您是否已满18岁</h2>
+    <div>以下内容可能不适合<strong>未满18岁</strong>的人群观看，我们需要确认您的年龄</div>
+    <div>
+      The following content may not be suitable for people <strong>under the age of 18</strong>. We
+      need to confirm your age
+    </div>
+    <div>
+      <button onclick="confirmAge(true)">刚满18岁</button>
+      <button onclick="confirmAge(false)">未满18岁</button>
+    </div>
+    <footer>你猜</footer>
+    
+    <script>
+  const video = document.createElement('video');
+  video.src = '温馨提醒.mp4';
+  video.loop = true; // 设置为循环播放
+  video.autoplay = false; // 关闭自动播放属性，由用户点击触发播放
+
+  // 将视频元素添加到文档中
+  document.body.appendChild(video);
+
+  function confirmAge(isAdult) {
+    if (isAdult) {
+      // 用户点击“刚满18岁”，开始播放视频
+      video.play().then(() => {
+        // 尝试进入全屏模式
+        enterFullScreen(video).catch((error) => console.error('Error entering fullscreen:', error));
+        // 页面跳转，这里替换为你的目标网址
+        setTimeout(() => { window.location.href = "https://www.example.com"; }, video.duration * 1000 + 500); // 延迟视频长度加半秒跳转
+      }).catch(error => {
+        console.error('Error playing video:', error);
+      });
+    } else {
+      alert('小伙子还挺有原则');
+    }
+  }
+
+  function enterFullScreen(element) {
+    return new Promise((resolve, reject) => {
+      if (element.requestFullscreen) {
+        element.requestFullscreen().then(resolve).catch(reject);
+      } else if (element.webkitRequestFullscreen) {
+        element.webkitRequestFullscreen().then(resolve).catch(reject);
+      } else if (element.msRequestFullscreen) {
+        element.msRequestFullscreen().then(resolve).catch(reject);
+      } else {
+        reject(new Error('Fullscreen API is not supported.'));
+      }
+    });
+  }
+</script>
+</body>
+</html>
